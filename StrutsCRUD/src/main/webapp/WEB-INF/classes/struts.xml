@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="false"/>
+    <constant name="struts.multipart.saveDir" value="/tmp"/> 
+    <constant name="struts.action.extension" value=","/>   
+    
+    <package name="abc" namespace="/" extends="struts-default" > 
+        
+        <action name="adduser" class="user.controller.UserController" method="adduser">
+            <result name="success" >UserDetailsList.jsp</result>
+        </action>
+
+        <action name="deleteuser" class="user.controller.UserController" method="userdelete">
+            <result name="success" >UserDetailsList.jsp</result>
+        </action>
+
+        <action name="updateuser" class="user.controller.UserController" method="userupdate">
+             <result name="success" >UserDetailsList.jsp</result>
+        </action>
+
+        <action name="userslist" class="user.controller.UserController" method="alluserlist" >
+            <result name="success" >UserDetailsList.jsp</result>
+        </action>
+    </package>
+</struts>

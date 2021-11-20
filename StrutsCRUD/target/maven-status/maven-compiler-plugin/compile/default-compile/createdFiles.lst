@@ -1,0 +1,4 @@
+BeanClasses\UserBean.class
+com\struts\dao\UserDAO.class
+com\struts\dao\DBconnection.class
+user\controller\UserController.class
